@@ -18,8 +18,8 @@
   
   <entry>
     <title>利用 Hexo 并托管到 GitHub 上</title>
-    <link href="http://example.com/2024/11/15/hello(2)/"/>
-    <id>http://example.com/2024/11/15/hello(2)/</id>
+    <link href="http://example.com/2024/11/15/hello-world/"/>
+    <id>http://example.com/2024/11/15/hello-world/</id>
     <published>2024-11-15T07:30:00.000Z</published>
     <updated>2024-11-15T08:22:12.579Z</updated>
     
@@ -48,8 +48,8 @@
   
   <entry>
     <title>利用 Hexo 并托管到 GitHub 上</title>
-    <link href="http://example.com/2024/11/15/hello-world/"/>
-    <id>http://example.com/2024/11/15/hello-world/</id>
+    <link href="http://example.com/2024/11/15/hello(2)/"/>
+    <id>http://example.com/2024/11/15/hello(2)/</id>
     <published>2024-11-15T07:30:00.000Z</published>
     <updated>2024-11-15T08:22:12.579Z</updated>
     
