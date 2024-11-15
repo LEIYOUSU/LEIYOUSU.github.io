@@ -1,71 +1,120 @@
-const { Component } = require('inferno');
-const classname = require('hexo-component-inferno/lib/util/classname');
-const Head = require('./common/head');
-const Navbar = require('./common/navbar');
-const Widgets = require('./common/widgets');
-const Footer = require('./common/footer');
-const Scripts = require('./common/scripts');
-const Search = require('./common/search');
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Archives: 2024/11 - NancyLog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="NancyLog"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="NancyLog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="辣椒の酱"><meta property="og:url" content="https://removeif.github.io/"><meta property="og:site_name" content="辣椒の酱"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="removeif"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"NancyLog","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Nancy"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject"}},"description":""}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="NancyLog" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="NancyLog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><div style="post-calendar-pre"><div id="post-calendar"></div></div><script type="text/javascript" src="/js/echarts.min.js"></script><script type="text/javascript">function loadEchart(){
+            if($("#post-calendar").length <= 0){
+                return;
+            }
+            $.getScript('/js/echarts.min.js', function () { 
+            let myChart = echarts.init(document.getElementById('post-calendar'));
+            let option = {
+            title: {
+                top: 0,
+                text: 'Post Calendar',
+                left: '42%',
+                textStyle: {
+                    color: '#3C4858'
+                }
+            },
+            tooltip: {
+                padding: 10,
+                backgroundColor: '#555',
+                borderColor: '#777',
+                borderWidth: 1,
+                formatter: function (obj) {
+                    var value = obj.value;
+                    return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+                }
+            },
+            visualMap: {
+                show: true,
+                showLabel: true,
+                categories: [0, 1, 2, 3, 4],
+                calculable: true,
+                inRange: {
+                    symbol: 'rect',
+                    color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+                },
+                itemWidth: 12,
+                itemHeight: 12,
+                orient: 'horizontal',
+                left: '35%',
+                bottom: 0
+            },
+            calendar: [{
+                left: 'center',
+                range: ["2024-03-15", "2024-11-15"],
+                cellSize: [13, 13],
+                splitLine: {
+                    show: false
+                },
+                itemStyle: {
+                    color: '#196127',
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                yearLabel: {
+                    show: false
+                },
+                monthLabel: {
+                    nameMap: 'en',
+                    fontSize: 11
+                },
+                dayLabel: {
+                    formatter: '{start}  1st',
+                    nameMap: 'en',
+                    fontSize: 11
+                }
+            }],
+            series: [{
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                calendarIndex: 0,
+                data: [["2024-03-15", 0], ["2024-03-16", 0], ["2024-03-17", 0], ["2024-03-18", 0], ["2024-03-19", 0], ["2024-03-20", 0], ["2024-03-21", 0], ["2024-03-22", 0], ["2024-03-23", 0], ["2024-03-24", 0], ["2024-03-25", 0], ["2024-03-26", 0], ["2024-03-27", 0], ["2024-03-28", 0], ["2024-03-29", 0], ["2024-03-30", 0], ["2024-03-31", 0], ["2024-04-01", 0], ["2024-04-02", 0], ["2024-04-03", 0], ["2024-04-04", 0], ["2024-04-05", 0], ["2024-04-06", 0], ["2024-04-07", 0], ["2024-04-08", 0], ["2024-04-09", 0], ["2024-04-10", 0], ["2024-04-11", 0], ["2024-04-12", 0], ["2024-04-13", 0], ["2024-04-14", 0], ["2024-04-15", 0], ["2024-04-16", 0], ["2024-04-17", 0], ["2024-04-18", 0], ["2024-04-19", 0], ["2024-04-20", 0], ["2024-04-21", 0], ["2024-04-22", 0], ["2024-04-23", 0], ["2024-04-24", 0], ["2024-04-25", 0], ["2024-04-26", 0], ["2024-04-27", 0], ["2024-04-28", 0], ["2024-04-29", 0], ["2024-04-30", 0], ["2024-05-01", 0], ["2024-05-02", 0], ["2024-05-03", 0], ["2024-05-04", 0], ["2024-05-05", 0], ["2024-05-06", 0], ["2024-05-07", 0], ["2024-05-08", 0], ["2024-05-09", 0], ["2024-05-10", 0], ["2024-05-11", 0], ["2024-05-12", 0], ["2024-05-13", 0], ["2024-05-14", 0], ["2024-05-15", 0], ["2024-05-16", 0], ["2024-05-17", 0], ["2024-05-18", 0], ["2024-05-19", 0], ["2024-05-20", 0], ["2024-05-21", 0], ["2024-05-22", 0], ["2024-05-23", 0], ["2024-05-24", 0], ["2024-05-25", 0], ["2024-05-26", 0], ["2024-05-27", 0], ["2024-05-28", 0], ["2024-05-29", 0], ["2024-05-30", 0], ["2024-05-31", 0], ["2024-06-01", 0], ["2024-06-02", 0], ["2024-06-03", 0], ["2024-06-04", 0], ["2024-06-05", 0], ["2024-06-06", 0], ["2024-06-07", 0], ["2024-06-08", 0], ["2024-06-09", 0], ["2024-06-10", 0], ["2024-06-11", 0], ["2024-06-12", 0], ["2024-06-13", 0], ["2024-06-14", 0], ["2024-06-15", 0], ["2024-06-16", 0], ["2024-06-17", 0], ["2024-06-18", 0], ["2024-06-19", 0], ["2024-06-20", 0], ["2024-06-21", 0], ["2024-06-22", 0], ["2024-06-23", 0], ["2024-06-24", 0], ["2024-06-25", 0], ["2024-06-26", 0], ["2024-06-27", 0], ["2024-06-28", 0], ["2024-06-29", 0], ["2024-06-30", 0], ["2024-07-01", 0], ["2024-07-02", 0], ["2024-07-03", 0], ["2024-07-04", 0], ["2024-07-05", 0], ["2024-07-06", 0], ["2024-07-07", 0], ["2024-07-08", 0], ["2024-07-09", 0], ["2024-07-10", 0], ["2024-07-11", 0], ["2024-07-12", 0], ["2024-07-13", 0], ["2024-07-14", 0], ["2024-07-15", 0], ["2024-07-16", 0], ["2024-07-17", 0], ["2024-07-18", 0], ["2024-07-19", 0], ["2024-07-20", 0], ["2024-07-21", 0], ["2024-07-22", 0], ["2024-07-23", 0], ["2024-07-24", 0], ["2024-07-25", 0], ["2024-07-26", 0], ["2024-07-27", 0], ["2024-07-28", 0], ["2024-07-29", 0], ["2024-07-30", 0], ["2024-07-31", 0], ["2024-08-01", 0], ["2024-08-02", 0], ["2024-08-03", 0], ["2024-08-04", 0], ["2024-08-05", 0], ["2024-08-06", 0], ["2024-08-07", 0], ["2024-08-08", 0], ["2024-08-09", 0], ["2024-08-10", 0], ["2024-08-11", 0], ["2024-08-12", 0], ["2024-08-13", 0], ["2024-08-14", 0], ["2024-08-15", 0], ["2024-08-16", 0], ["2024-08-17", 0], ["2024-08-18", 0], ["2024-08-19", 0], ["2024-08-20", 0], ["2024-08-21", 0], ["2024-08-22", 0], ["2024-08-23", 0], ["2024-08-24", 0], ["2024-08-25", 0], ["2024-08-26", 0], ["2024-08-27", 0], ["2024-08-28", 0], ["2024-08-29", 0], ["2024-08-30", 0], ["2024-08-31", 0], ["2024-09-01", 0], ["2024-09-02", 0], ["2024-09-03", 0], ["2024-09-04", 0], ["2024-09-05", 0], ["2024-09-06", 0], ["2024-09-07", 0], ["2024-09-08", 0], ["2024-09-09", 0], ["2024-09-10", 0], ["2024-09-11", 0], ["2024-09-12", 0], ["2024-09-13", 0], ["2024-09-14", 0], ["2024-09-15", 0], ["2024-09-16", 0], ["2024-09-17", 0], ["2024-09-18", 0], ["2024-09-19", 0], ["2024-09-20", 0], ["2024-09-21", 0], ["2024-09-22", 0], ["2024-09-23", 0], ["2024-09-24", 0], ["2024-09-25", 0], ["2024-09-26", 0], ["2024-09-27", 0], ["2024-09-28", 0], ["2024-09-29", 0], ["2024-09-30", 0], ["2024-10-01", 0], ["2024-10-02", 0], ["2024-10-03", 0], ["2024-10-04", 0], ["2024-10-05", 0], ["2024-10-06", 0], ["2024-10-07", 0], ["2024-10-08", 0], ["2024-10-09", 0], ["2024-10-10", 0], ["2024-10-11", 0], ["2024-10-12", 0], ["2024-10-13", 0], ["2024-10-14", 0], ["2024-10-15", 0], ["2024-10-16", 0], ["2024-10-17", 0], ["2024-10-18", 0], ["2024-10-19", 0], ["2024-10-20", 0], ["2024-10-21", 0], ["2024-10-22", 0], ["2024-10-23", 0], ["2024-10-24", 0], ["2024-10-25", 0], ["2024-10-26", 0], ["2024-10-27", 0], ["2024-10-28", 0], ["2024-10-29", 0], ["2024-10-30", 0], ["2024-10-31", 0], ["2024-11-01", 0], ["2024-11-02", 0], ["2024-11-03", 0], ["2024-11-04", 0], ["2024-11-05", 0], ["2024-11-06", 0], ["2024-11-07", 0], ["2024-11-08", 0], ["2024-11-09", 0], ["2024-11-10", 0], ["2024-11-11", 0], ["2024-11-12", 0], ["2024-11-13", 0], ["2024-11-14", 0], ["2024-11-15", 1]]
+            }]
 
-module.exports = class extends Component {
-    render() {
-        const { site, config, page, helper, body } = this.props;
-        const { comment, use_pjax, has_banner } = config;
-        const { __, my_cdn, url_for } = helper;
-
-        // 默认不加载公式，文中头部开启mathJax:true才加载
-        var isMath = page.mathJax != undefined && page.mathJax;
-        const language = page.lang || page.language || config.language;
-        const columnCount = Widgets.getColumnCount(config.widgets);
-        const hasComment = comment != undefined && comment.type != undefined && (comment.type == 'gitalk' || comment.type == 'valine')
-            && (comment.has_hot_recommend || comment.has_latest_comment);
-        var appKey;
-        var appId;
-        var userName;
-        var userRepo;
-        var isValine;
-
-        if (comment != undefined && comment.type != undefined && comment.type == 'gitalk') {
-            appId = comment.client_id;
-            appKey = comment.client_secret;
-            userName = comment.owner;;
-            userRepo = comment.repo;
-            isValine = false;
-        } else if (comment != undefined && comment.type != undefined && comment.type == 'valine') {
-            appId = comment.app_id;
-            appKey = comment.app_key;
-            userName = comment.owner;
-            isValine = true;
-        }
-        var hotTitle = __('widget.hot_recommend');
-        var hotTip = __('widget.hot_recommend_tip');
-
-        // =====index hot_recommend
-        var hotRecommendStr =
-            `<div class="card widget">
-            <div class="card-content">
-                <h3 class="menu-label">${hotTitle}</h3><span id="index_hot_div">${hotTip}</span>
-            </div>
-        </div>`;
-
-        // =====index banner
-        var bannerStr =
-            `<div class="card widget">
-            <div class="card-content1 card-image">
-                <span id="banner"><div class="card-content ">Banner ${hotTip}</div></span>
-            </div>
-        </div>`;
-        
-        // mathjax support 使用方法 md文章头部开启mathJax: true，md文章中公式格式：$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
-        var mathJaxJs = `function loadMathJax() { //加载mathjax
-            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
-                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } });
-                var math = document.getElementsByClassName("entry-content")[0];
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
-            });
-        };loadMathJax();`;
-
-        var pjaxJs = `var pjax = new Pjax({
+        };
+        myChart.setOption(option);})};loadEchart();</script><div><h3 class="tag is-primary">November 2024</h3><div class="timeline"><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-15T02:20:18.338Z">2024-11-15</time></p><p class="title"><a href="/2024/11/15/hello-world/">Hello World</a></p></div></article></div><br></div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png" alt="辣椒の酱"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">辣椒の酱</p><p class="is-size-6 is-block">尚未执佩剑，转眼即江湖</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>阿尔及利亚</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Post</p><a href="/archives"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/removeif"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:removeif@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://removeif.github.io/remove.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"From《"+data.from+"》</p><p>Provider-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">Latest Comment</h3><span class="body_hot_comment">Loading...Wait a Minute!</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-15T02:20:18.338Z">2024-11-15</time></p><p class="title"><a href="/2024/11/15/hello-world/">Hello World</a></p></div></article></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2024/11/"><span class="level-start"><span class="level-item">November 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="NancyLog" height="28"></a><p class="size-small"><span>&copy; 2024 Nancy</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">川ICP备88888888号-8（测试）</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2018/11/11 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv">99+</span></strong> users <strong><span id="busuanzi_value_site_pv">99+</span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('Ov23liBCaw0EWBrHQep0','4b87ae17e397e28803dc24b8b7f883f11a4d715d','LEIYOUSU','LEIYOUSU.github.io',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
                 ".section",
@@ -81,7 +130,7 @@ module.exports = class extends Component {
 
         function loadMathJax() { //加载mathjax
             $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
-                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } });
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
                 var math = document.getElementsByClassName("entry-content")[0];
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
             });
@@ -94,10 +143,10 @@ module.exports = class extends Component {
         // PJAX 完成之后执行的函数，可以和上面的重载放在一起
         document.addEventListener('pjax:complete', function () {
             $(".section").css({opacity:1});
-            if(${hasComment}){
-                $.getScript('${my_cdn(url_for('/js/comment-issue-data.js'))}',function(){loadIssueData('${appId}','${appKey}','${userName}','${userRepo}',${isValine});});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('Ov23liBCaw0EWBrHQep0','4b87ae17e397e28803dc24b8b7f883f11a4d715d','LEIYOUSU','LEIYOUSU.github.io',false);});
             }
-            if(${isMath}){
+            if(false){
                 loadMathJax();
             }
             loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
@@ -106,56 +155,4 @@ module.exports = class extends Component {
             if(typeof loadBanner == 'function'){
                 loadBanner();
             }
-        });`;
-
-        if (comment == undefined || comment.type == undefined
-            || comment.type != 'gitalk'
-            || comment.has_hot_recommend == undefined
-            || !comment.has_hot_recommend) {
-            hotRecommendStr = '';
-        }
-
-        var indexTopData = hotRecommendStr;
-
-        const hasBanner = has_banner != undefined && has_banner;
-
-        if (indexTopData == '' && hasBanner) {
-            indexTopData = bannerStr;
-        }
-
-        if (page.path != 'index.html') {
-            indexTopData = '';
-        }
-
-        let isPageOrPost = page.layout == 'page' || page.layout == 'post';
-        return <html lang={language ? language.substr(0, 2) : ''}>
-            <Head site={site} config={config} helper={helper} page={page} />
-            <body className={`is-${columnCount}-column has-navbar-fixed-top`}>
-                <Navbar config={config} helper={helper} page={page} />
-                <script type="text/javascript" src={my_cdn(url_for('/js/theme-setting.js'))}></script>
-                <section class="section">
-                    <div class="container">
-                        <div class="columns">
-                            <div class={classname({
-                                column: true,
-                                'order-2': true,
-                                'column-main': true,
-                                'is-12': columnCount === 1,
-                                'is-8-tablet is-8-desktop is-6-widescreen': (page.layout != 'post' && page.layout != 'page') && columnCount === 3,
-                                'is-8-tablet is-8-desktop is-9-widescreen': columnCount === 2 || page.layout === 'post'
-                            })} dangerouslySetInnerHTML={{__html: indexTopData + body}}></div>
-                            <Widgets site={site} config={config} helper={helper} page={page} position={'left'}/>
-                            {isPageOrPost ? null : <Widgets site={site} config={config} helper={helper} page={page} position={'right'}/>}
-                        </div>
-                    </div>
-                </section>
-                <Footer config={config} helper={helper} />
-                <Scripts site={site} config={config} helper={helper} page={page} />
-                <Search config={config} helper={helper} />
-                {use_pjax ? <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> : null}
-                {use_pjax ? <script type="text/javascript" dangerouslySetInnerHTML={{ __html: pjaxJs }}></script> : null}
-                {isMath ? <script type="text/javascript" dangerouslySetInnerHTML={{ __html: mathJaxJs }}></script> : null}
-            </body>
-        </html>;
-    }
-};
+        });</script></body></html>
