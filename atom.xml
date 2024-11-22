@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-11-22T05:35:25.363Z</updated>
+  <updated>2024-11-22T05:44:07.812Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://example.com/2024/11/15/Start1/"/>
     <id>http://example.com/2024/11/15/Start1/</id>
     <published>2024-11-15T07:30:00.000Z</published>
-    <updated>2024-11-22T05:35:25.363Z</updated>
+    <updated>2024-11-22T05:44:07.812Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="开始写博客的契机"><a href="#开始写博客的契机" class="headerlink" title="开始写博客的契机"></a>开始写博客的契机</h2><p>从大学开始，我就有了记录自己成长和思考的愿望。随着时间的推移，我发现，写博客不仅能帮助我整理思绪，还能与更多的人分享自己的知识和经验。于是，决定开启我的第一篇博客之旅。<br>在这之前，我尝试过一些博客平台，但总感觉不够自由和个性化。直到我接触到了 <strong>Hexo</strong>，一个静态博客生成器，我被它的简洁和高效所吸引。于是，决定用 Hexo 来搭建我的个人博客。</p><h2 id="Hexo-与-GitHub"><a href="#Hexo-与-GitHub" class="headerlink" title="Hexo 与 GitHub"></a>Hexo 与 GitHub</h2><p>搭建 Hexo 博客并不复杂，最让我惊喜的是，利用 GitHub 的 Pages 服务，可以免费将博客托管到互联网上。整个过程并没有太多技术难度，主要是学习如何配置 Hexo、选择主题、以及与 GitHub 进行配置。<br>在本地，我通过命令行快速安装了 Hexo，并创建了我的博客框架。接着，我选择了一个自己喜欢的主题（<code>amazing</code>），并进行了一些个性化的修改。对于我这个初学者来说，这些配置的灵活性让我感到既兴奋又有挑战。</p><h2 id="配置与部署"><a href="#配置与部署" class="headerlink" title="配置与部署"></a>配置与部署</h2><p>配置完主题和内容后，我将博客的文件部署到 GitHub 上，利用 GitHub Pages 将我的博客发布到互联网。这一过程不仅让我学会了如何与 GitHub 配合使用，还让我更加熟悉了如何使用 Git 和命令行工具来管理博客。<br>最初部署时遇到了一些小问题，比如无法连接 GitHub，但通过查阅文档和在线搜索，我很快找到了问题所在，并成功部署了我的博客。</p><h2 id="收获与展望"><a href="#收获与展望" class="headerlink" title="收获与展望"></a>收获与展望</h2><p>通过这次搭建博客的过程，我不仅学会了 Hexo 的使用，还深入了解了 GitHub Pages 的配置和部署方式。最重要的是，我体验到了自己动手搭建一个博客的乐趣，并且收获了很多关于 Web 开发、Git 使用等方面的知识。<br>未来，我希望通过这个博客记录我的学习过程，分享我的编程经验，以及一些生活中的感悟。如果你有相同兴趣，欢迎随时交流，也许我们能在这里找到志同道合的朋友。<br>通过这个平台，我希望不仅能分享技术，也能分享生活的点滴，让自己在分享中成长，在交流中进步。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="开始写博客的契机"><a href="#开始写博客的契机" class="headerlink" title="开始写博客的契机"></a>开始写博客的契机</h2><p>图片示例:<br><img src="/images/example.jpg" alt="我的头像"><br>从大学开始，我就有了记录自己成长和思考的愿望。随着时间的推移，我发现，写博客不仅能帮助我整理思绪，还能与更多的人分享自己的知识和经验。于是，决定开启我的第一篇博客之旅。<br>在这之前，我尝试过一些博客平台，但总感觉不够自由和个性化。直到我接触到了 <strong>Hexo</strong>，一个静态博客生成器，我被它的简洁和高效所吸引。于是，决定用 Hexo 来搭建我的个人博客。</p><h2 id="Hexo-与-GitHub"><a href="#Hexo-与-GitHub" class="headerlink" title="Hexo 与 GitHub"></a>Hexo 与 GitHub</h2><p>搭建 Hexo 博客并不复杂，最让我惊喜的是，利用 GitHub 的 Pages 服务，可以免费将博客托管到互联网上。整个过程并没有太多技术难度，主要是学习如何配置 Hexo、选择主题、以及与 GitHub 进行配置。<br>在本地，我通过命令行快速安装了 Hexo，并创建了我的博客框架。接着，我选择了一个自己喜欢的主题（<code>amazing</code>），并进行了一些个性化的修改。对于我这个初学者来说，这些配置的灵活性让我感到既兴奋又有挑战。</p><h2 id="配置与部署"><a href="#配置与部署" class="headerlink" title="配置与部署"></a>配置与部署</h2><p>配置完主题和内容后，我将博客的文件部署到 GitHub 上，利用 GitHub Pages 将我的博客发布到互联网。这一过程不仅让我学会了如何与 GitHub 配合使用，还让我更加熟悉了如何使用 Git 和命令行工具来管理博客。<br>最初部署时遇到了一些小问题，比如无法连接 GitHub，但通过查阅文档和在线搜索，我很快找到了问题所在，并成功部署了我的博客。</p><h2 id="收获与展望"><a href="#收获与展望" class="headerlink" title="收获与展望"></a>收获与展望</h2><p>通过这次搭建博客的过程，我不仅学会了 Hexo 的使用，还深入了解了 GitHub Pages 的配置和部署方式。最重要的是，我体验到了自己动手搭建一个博客的乐趣，并且收获了很多关于 Web 开发、Git 使用等方面的知识。<br>未来，我希望通过这个博客记录我的学习过程，分享我的编程经验，以及一些生活中的感悟。如果你有相同兴趣，欢迎随时交流，也许我们能在这里找到志同道合的朋友。<br>通过这个平台，我希望不仅能分享技术，也能分享生活的点滴，让自己在分享中成长，在交流中进步。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;开始写博客的契机&quot;&gt;&lt;a href=&quot;#开始写博客的契机&quot; class=&quot;headerlink&quot; title=&quot;开始写博客的契机&quot;&gt;&lt;/a&gt;开始写博客的契机&lt;/h2&gt;&lt;p&gt;从大学开始，我就有了记录自己成长和思考的愿望。随着时间的推移，我发现，写博客不仅能帮助我整理
+        &lt;h2 id=&quot;开始写博客的契机&quot;&gt;&lt;a href=&quot;#开始写博客的契机&quot; class=&quot;headerlink&quot; title=&quot;开始写博客的契机&quot;&gt;&lt;/a&gt;开始写博客的契机&lt;/h2&gt;&lt;p&gt;图片示例:&lt;br&gt;&lt;img src=&quot;/images/example.jpg&quot; alt=&quot;我
       
     
     </summary>
