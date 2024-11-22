@@ -46,4 +46,40 @@
     
   </entry>
   
+  <entry>
+    <title>NancyWeather</title>
+    <link href="http://example.com/2023/10/22/Start2/"/>
+    <id>http://example.com/2023/10/22/Start2/</id>
+    <published>2023-10-22T04:30:00.000Z</published>
+    <updated>2024-11-22T08:01:18.499Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p><img src="/images/WeatherNancy.png" alt="GitHub"><br>Weather-Nancy 是我在大二下学期 Android 课程中完成的一款综合性 Android 应用，目前正在不断完善和修改。<br>该应用提供天气查询、音乐播放和日程管理功能。用户可以获取实时天气数据、播放本地和在线音乐，并管理个人日程安排。<br>项目Github链接:<a href="https://github.com/LEIYOUSU/weather-nancy.git">https://github.com/LEIYOUSU/weather-nancy.git</a></p><h2 id="相关技术"><a href="#相关技术" class="headerlink" title="相关技术"></a>相关技术</h2><p>(1)API 集成: 获取地理位置和天气信息，采用了和风天气API以及百度定位的SDK<br>(2)OkHttp：用于向外部天气 API 发起 HTTP 请求并处理响应。<br>(3)MediaPlayer：用于实现音频播放功能，支持本地和在线音乐播放。<br>(4)Room Database：用于存储用户的日程数据，提供本地数据持久化。Room 是一个 Android 官方提供的 SQLite 数据库抽象层。<br>(5)Gradle：Android 项目的构建工具，用于管理依赖和构建过程。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;项目简介&quot;&gt;&lt;a href=&quot;#项目简介&quot; class=&quot;headerlink&quot; title=&quot;项目简介&quot;&gt;&lt;/a&gt;项目简介&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/WeatherNancy.png&quot; alt=&quot;GitHub&quot;&gt;&lt;br&gt;Weather-N
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://example.com/categories/Android/"/>
+    
+    
+      <category term="GitHub" scheme="http://example.com/tags/GitHub/"/>
+    
+      <category term="Android" scheme="http://example.com/tags/Android/"/>
+    
+      <category term="天气预报App" scheme="http://example.com/tags/%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5App/"/>
+    
+      <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+      <category term="Room Database" scheme="http://example.com/tags/Room-Database/"/>
+    
+      <category term="Gradle" scheme="http://example.com/tags/Gradle/"/>
+    
+  </entry>
+  
 </feed>
