@@ -47,7 +47,7 @@
     <link href="http://example.com/2024/11/28/Linux1/"/>
     <id>http://example.com/2024/11/28/Linux1/</id>
     <published>2024-11-28T05:30:00.000Z</published>
-    <updated>2024-11-27T13:00:34.664Z</updated>
+    <updated>2024-11-27T14:30:47.058Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="相关技术：Namespaces-Cgroups-UnionFS-Container-Format"><a href="#相关技术：Namespaces-Cgroups-UnionFS-Container-Format" class="headerlink" title="相关技术：Namespaces, Cgroups, UnionFS, Container Format"></a>相关技术：Namespaces, Cgroups, UnionFS, Container Format</h3><h4 id="1-Namespaces"><a href="#1-Namespaces" class="headerlink" title="1. Namespaces"></a>1. <strong>Namespaces</strong></h4><p><strong>Namespaces</strong>（命名空间）是 Linux 内核提供的一种隔离技术，用于将不同的进程组隔离开来，使得它们看起来像是在各自独立的环境中运行。通过使用命名空间，Docker 容器能够实现进程、网络、文件系统等方面的隔离。</p><p>Docker 使用了以下几种主要的命名空间来实现容器隔离：</p><ul><li><strong>PID Namespace</strong>：每个容器有自己的进程 ID（PID）空间，容器内部的进程与宿主机进程互不干扰。</li><li><strong>Network Namespace</strong>：容器有独立的网络栈，包括 IP 地址、端口和路由表，容器间网络通信通过虚拟网络接口隔离。</li><li><strong>Mount Namespace</strong>：容器拥有独立的文件系统视图，通过挂载点隔离宿主机和容器的文件系统。</li><li><strong>IPC Namespace</strong>：提供进程间通信的隔离，容器内部的进程只访问本容器的共享内存等资源。</li><li><strong>UTS Namespace</strong>：隔离主机名和域名等系统信息，每个容器可以拥有独立的主机名，避免冲突。</li><li><strong>User Namespace</strong>：容器内部的用户和组与宿主机隔离，容器中的 root 用户不具备宿主机的 root 权限。</li></ul><p>通过这些命名空间，Docker 实现了容器级别的资源隔离，确保每个容器的环境互不干扰。</p><h4 id="2-Cgroups"><a href="#2-Cgroups" class="headerlink" title="2. Cgroups"></a>2. <strong>Cgroups</strong></h4><p><strong>Cgroups</strong>（Control Groups）是 Linux 内核提供的资源控制技术，用于限制、记录和隔离进程组使用的资源（如 CPU、内存、磁盘 I/O 和网络带宽等）。在 Docker 中，cgroups 用来限制每个容器的资源消耗，避免容器间资源的争抢。</p><ul><li><strong>CPU Cgroup</strong>：限制容器使用的 CPU 时间和优先级，控制容器的 CPU 资源分配。</li><li><strong>Memory Cgroup</strong>：限制容器使用的内存量，确保容器不会消耗过多内存，避免宿主机崩溃。</li><li><strong>Block I/O Cgroup</strong>：限制容器的磁盘 I/O 使用，防止过度使用磁盘带宽。</li><li><strong>Network I/O Cgroup</strong>：控制容器的网络带宽使用，避免占用过多带宽。</li></ul><p>通过 Cgroups，Docker 可以精细控制每个容器的资源消耗，保证资源分配的公平性和有效性。</p><h4 id="3-UnionFS"><a href="#3-UnionFS" class="headerlink" title="3. UnionFS"></a>3. <strong>UnionFS</strong></h4><p><strong>UnionFS</strong>（Union File System）是 Linux 上的一种文件系统实现，它允许将多个文件系统合并成一个单一的文件系统视图。Docker 使用 UnionFS 来高效地管理镜像层，使得容器在运行时能够共享镜像文件，而无需重复存储相同的文件。</p><ul><li><strong>层叠文件系统</strong>：在 Docker 中，镜像由多个只读层组成，每一层代表镜像构建过程中的一个操作（如安装软件、修改配置）。这些层通过 UnionFS 合并成一个文件系统视图，容器在启动时从镜像的只读层中读取文件。</li><li><strong>写时复制（Copy-on-Write，COW）</strong>：容器运行时，会生成一个可写层来保存容器对文件的修改。修改的文件会存储在容器的写时复制层中，未修改的部分仍指向镜像的只读层。这样可以高效复用镜像层，避免重复存储。</li></ul><p>UnionFS 提供了高效的文件系统合并和数据共享机制，是 Docker 高效构建和运行镜像的关键。</p><h4 id="4-Container-Format"><a href="#4-Container-Format" class="headerlink" title="4. Container Format"></a>4. <strong>Container Format</strong></h4><p><strong>Container Format</strong>（容器格式）是 Docker 容器的内部结构和规范，它决定了容器如何封装应用程序及其依赖项、运行时环境等。容器格式保证了容器可以在不同的系统和平台之间迁移和运行。</p><p>容器格式通常包含以下几个部分：</p><ul><li><strong>镜像层</strong>：容器镜像由多个层组成，每一层包含应用程序及其依赖、配置文件等内容。</li><li><strong>元数据</strong>：容器镜像包含元数据，如应用程序的启动命令、环境变量、端口映射等配置。</li><li><strong>可执行环境</strong>：容器内包含操作系统环境、文件系统、库文件和应用程序等。</li></ul><p>Docker 使用标准的容器格式，通过镜像层和元数据的组合，使得容器能够在不同的环境中迁移和运行，避免对宿主操作系统的依赖。</p>]]></content>
     
@@ -61,7 +61,7 @@
     </summary>
     
     
-      <category term="Linuxinux" scheme="http://example.com/categories/Linuxinux/"/>
+      <category term="Linux" scheme="http://example.com/categories/Linux/"/>
     
     
       <category term="Docker" scheme="http://example.com/tags/Docker/"/>
